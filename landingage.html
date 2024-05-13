@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Page</title>
+    <style>
+        /* Style for logo */
+        .logo {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .logo img {
+            width: 150px;
+            /* Ubah ukuran logo sesuai kebutuhan */
+        }
+
+        /* Style for background image */
+        body {
+            background-image: url("asset/background.png");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            position: relative;
+            /* Menambahkan posisi relatif pada body */
+        }
+
+        /* Style for h2 */
+        h2 {
+            padding-left: 10px;
+            text-align: left;
+            position: absolute;
+            bottom: 220px;
+            width: 80%;
+            margin: 0;
+        }
+
+        /* Style for p */
+        p {
+            padding-left: 10px;
+            text-align: left;
+            position: absolute;
+            bottom: 110px;
+            width: 87%;
+            margin: 0;
+        }
+
+        /* Style for button container */
+        .button-container {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        .custom-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #F97316;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .custom-button:hover {
+            background-color: #c55200;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="asset/logo.png" alt="Logo" width="100">
+    </div>
+
+    <!-- Content -->
+    <h2>Explore the beauty of the Indonesia!</h2>
+    <p>Temukan petualangan di Indonesia dengan aplikasi TourEaseID. Nikmati kekayaan
+        alam dan budaya Indonesia, serta pengalaman tak terlupakan.
+    </p>
+    <!-- Button Container -->
+    <div class="button-container">
+        <button class="custom-button">Mulai Menjelajah</button>
+    </div>
+
+    <!-- Script to display alert on desktop/laptop browsers -->
+    <script>
+        // Mendeteksi apakah pengguna membuka situs web di desktop/laptop
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        // Menampilkan alert jika bukan perangkat mobile
+        if (!isMobileDevice()) {
+            alert("Direkomendasikan membuka di browser handphone.");
+        }
+    </script>
+</body>
+
+</html>
